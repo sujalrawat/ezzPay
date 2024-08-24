@@ -1,22 +1,20 @@
-import Footer from "./component/Footer"
-import Navbar from "./component/Navbar"
-import NotesCard from "./component/NotesCard"
+import { Routes,Route,Link } from 'react-router-dom';
+import HomePage from './pages/HomePage';
+import SignUpPage from "./pages/SignUpPage"
+import SignInPage from "./pages/SignInPage"
+import ProductPage from './pages/ProductPage';
 
 
 function App() {
 
 
   return (
-    <div>
-     <Navbar/>
-     <div className="flex">
-     <NotesCard />
-     <NotesCard />
-     <NotesCard />
-     <NotesCard />
-     </div>
-     <Footer/>
-    </div>
+    <Routes>
+      <Route path="/" element={<HomePage/>}/>
+      <Route path="/signup" element={<SignUpPage/>}/>
+      <Route path="/signin" element={<SignInPage/>}/>
+      <Route path="/product" element={<ProductPage/>}/>
+    </Routes>
   )
 }
 
